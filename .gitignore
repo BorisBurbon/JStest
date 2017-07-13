@@ -1,0 +1,12 @@
+.idea/*
+.vscode/*
+
+
+task1/node_modules
+task1/.sass-cache
+
+task2/node_modules
+task2/.sass-cache
+
+task3/node_modules
+task3/.sass-cache

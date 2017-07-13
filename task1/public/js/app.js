@@ -1,0 +1,1 @@
+"use strict";function toMatrix(r,o){var t=[],a=0;for(a;a<r.length;){for(var e=[],i=0;i<o;i++)r[a]&&e.push(r[a++]);t.push(e)}return t}var data=[1,2,3,4,5,6,7,8],rowSize=4,str=toMatrix(data,rowSize),style=["padding: 0.5rem;","background: linear-gradient( #36a1d9, #176FD9);","font: 1rem/2 Georgia;","color: white;"].join("");console.log("%c%s",style,str),console.log(str);

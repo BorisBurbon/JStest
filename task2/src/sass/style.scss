@@ -1,0 +1,58 @@
+@import 'vendor/_reset';
+
+body {
+  background: black url("../images/bg.jpg") center right no-repeat;
+  padding: 60px;
+  min-height: 100vh;
+}
+h3 {
+  margin: 0;
+  padding-bottom: .3em;
+  padding-right: 20px;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 0;
+  padding: 0 0 .5em;
+}
+.task-container {
+  max-width: 800px;
+  margin: 0 auto;
+  &__block {
+    position: relative;
+    color: white;
+    border-bottom: 1px solid #000;
+    background: rgba(0,0,0,0.7);
+    padding: 20px 15px;
+    font-size: 1em;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.remove-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  font-size: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  background: rgba(0,0,0,0.9);
+  outline: none;
+  transition: all 0.2s ease-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
