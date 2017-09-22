@@ -3,56 +3,58 @@
 let userName = () => {
     let reg = /^[a-zA-Z]+$/;
     let name = document.fname.firstname.value;
-
+    let field = document.getElementById('error_field');
     if (name==="") {
-        document.getElementById('error_field').innerHTML="Enter Your Name";
-        document.getElementById('error_field').style.color = 'red';
+        field.innerHTML = "Enter Your Name";
+        field.style.color = 'red';
         document.fname.firstname.focus();
     }
     else if(reg.test(name)!==true) {
-        document.getElementById('error_field').innerHTML="Only Characters";
-        document.getElementById('error_field').style.color = 'red';
+        field.innerHTML = "Only Characters";
+        field.style.color = 'red';
         document.fname.firstname.focus();
     }
     else {
-        document.getElementById('error_field').innerHTML="ok";
-        document.getElementById('error_field').style.color = 'green';
+        field.innerHTML = "ok";
+        field.style.color = 'green';
     }
 };
 /*************************password*************************/
+const pattern1 = /[0-9]/;
+const pattern2 = /[a-z]/;
+const pattern3 = /[A-Z]/;
+const pattern4 = /.*[!@#$%^&*() =+_-]/;
+
 let userPassword = () => {
-    let pattern1=/[0-9]/;
-    let pattern2=/[a-z]/;
-    let pattern3=/[A-Z]/;
-    let pattern4=/.*[!@#$%^&*() =+_-]/;
-    let pwd=document.fname.password.value;
-    if(pwd==="") {
-        document.getElementById("error_pass").innerHTML="Enter your password";
+    let pwd = document.fname.password.value;
+    let error = document.getElementById('error_pass');
+    if( pwd === "") {
+        error.innerHTML="Enter your password";
         document.fname.password.focus();
     }
     else if(pwd.length<5) {
-        document.getElementById('error_pass').innerHTML="mimum 5";
-        document.getElementById('error_pass').style.color = 'red';
+        error.innerHTML="mimum 5";
+        error.style.color = 'red';
     }
     else if(pattern1.test(pwd)!==true) {
-        document.getElementById("error_pass").innerHTML="atleast one no";
-        document.getElementById('error_pass').style.color = 'red';
+        error.innerHTML="atleast one no";
+        error.style.color = 'red';
     }
     else if(pattern2.test(pwd)!==true) {
-        document.getElementById("error_pass").innerHTML="atleast one lowercase";
-        document.getElementById('error_pass').style.color = 'red';
+        error.innerHTML="atleast one lowercase";
+        error.style.color = 'red';
     }
     else if(pattern3.test(pwd)!==true) {
-        document.getElementById("error_pass").innerHTML="atleast one uppercase";
-        document.getElementById('error_pass').style.color = 'red';
+        error.innerHTML="atleast one uppercase";
+        error.style.color = 'red';
     }
     else if(pattern4.test(pwd)!==true) {
-        document.getElementById("error_pass").innerHTML="atleast one Special";
-        document.getElementById('error_pass').style.color = 'red';
+        error.innerHTML="atleast one Special";
+        error.style.color = 'red';
     }
     else {
-        document.getElementById('error_pass').innerHTML="ok";
-        document.getElementById('error_pass').style.color = 'green';
+        error.innerHTML="ok";
+        error.style.color = 'green';
     }
 };
 
@@ -60,17 +62,18 @@ let userPassword = () => {
 let confirm = ()=> {
     let pwd = document.fname.password.value;
     let cp = document.fname.cpwd.value;
+    let error = document.getElementById('error_cp');
     if(cp==="") {
-        document.getElementById('error_cp').innerHTML="Enter UR Password";
-        document.getElementById('error_cp').style.color = 'red';
+        error.innerHTML="Enter UR Password";
+        error.style.color = 'red';
     }
     else if(cp!==pwd) {
-        document.getElementById('error_cp').innerHTML="Password Not Matched";
-        document.getElementById('error_cp').style.color = 'red';
+        error.innerHTML="Password Not Matched";
+        error.style.color = 'red';
     }
     else {
-        document.getElementById('error_cp').innerHTML="ok";
-        document.getElementById('error_cp').style.color = 'green';
+        error.innerHTML="ok";
+        error.style.color = 'green';
     }
 };
 
@@ -79,31 +82,33 @@ let email = () => {
 
     let email=document.fname.email.value;
     let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let error = document.getElementById("error_email");
     if(email==="") {
-        document.getElementById("error_email").innerHTML="please enter the email id";
+        error.innerHTML="please enter the email id";
         document.fname.email.focus();
-        document.getElementById("error_email").style.color = 'red';
+        error.style.color = 'red';
     }
     else if(!email.match(mailformat)) {
-        document.getElementById("error_email").innerHTML="please enter the correct format";
+        error.innerHTML="please enter the correct format";
         document.fname.email.focus();
-        document.getElementById("error_email").style.color = 'red';
+        error.style.color = 'red';
     }
     else {
-        document.getElementById("error_email").innerHTML="ok";
-        document.getElementById("error_email").style.color = 'green';
+        error.innerHTML="ok";
+        error.style.color = 'green';
     }
 };
 
 /*************************checkbox*************************/
 let checbox = () => {
+    let error = document.getElementById("error_check");
     if((document.fname.checkbox.checked === false )) {
-        document.getElementById("error_check").innerHTML="select the checkbox";
-        document.getElementById("error_check").style.color = 'red';
+        error.innerHTML="select the checkbox";
+        error.style.color = 'red';
     }
     else {
-        document.getElementById("error_check").innerHTML="ok";
-        document.getElementById("error_check").style.color = 'green';
+        error.innerHTML="ok";
+        error.style.color = 'green';
     }
 };
 
