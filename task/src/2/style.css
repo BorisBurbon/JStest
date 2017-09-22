@@ -1,0 +1,103 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+body {
+    background: #000 url(images/bg.jpg) center right no-repeat;
+    padding: 60px;
+    min-height: 100vh
+}
+
+h3 {
+    margin: 0;
+    padding-bottom: .3em;
+    padding-right: 20px;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 15px
+}
+
+p {
+    margin: 0;
+    padding: 0 0 .5em
+}
+
+.task-container {
+    max-width: 800px;
+    margin: 0 auto
+}
+
+.task-container__block {
+    position: relative;
+    color: #fff;
+    border-bottom: 1px solid #000;
+    background: rgba(0, 0, 0, .7);
+    padding: 20px 15px;
+    font-size: 1em
+}
+
+.task-container__block:last-child {
+    border-bottom: none
+}
+
+.remove-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    font-size: 600;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background: rgba(0, 0, 0, .9);
+    outline: 0;
+    transition: all .2s ease-out
+}
+
+.remove-button:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}

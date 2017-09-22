@@ -1,1 +1,0 @@
-"use strict";var container=document.getElementById("task-container");container.onclick=function(t){t.target.classList.contains("remove-button")&&(t.target.parentNode.hidden=!t.target.parentNode.hidden)};

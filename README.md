@@ -4,6 +4,5 @@
     cd task*
     npm install
 ### start
-    gulp (folder task*)
-    http://localhost:3000/
+  npm run watch
 
